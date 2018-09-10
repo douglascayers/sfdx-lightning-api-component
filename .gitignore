@@ -1,0 +1,7 @@
+.idea
+.sfdx
+.vscode
+*.iml
+assets
+IlluminatedCloud
+deploy.sh
