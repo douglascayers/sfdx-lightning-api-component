@@ -60,6 +60,21 @@ Find the `<c:lc_api>` by its `aura:id` then call the `restRequest(..)` method pa
 })
 ```
 
+# Troubleshooting
+
+## "Access Denied" or "No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://yourinstance.visualforce.com' is therefore not allowed access."
+
+Your request was blocked due to [Cross-Origin Resource Sharing (CORS) policy](https://help.salesforce.com/articleView?id=extend_code_cors.htm&type=5).
+
+This can happen when trying to make a request to `/services/apexrest/` endpoint.
+For example, the Visualforce domain hosting `LC_APIPage` is on `https://yourinstance.visualforce.com` and is trying to make a web request to `https://yourinstance.my.salesforce.com/services/apexrest/`.
+Because the two domains do not match, then CORS policy prevents the request.
+
+1. In **Setup**, navigate to **Security | CORS**.
+
+2. Add the origin URL mentioned in your error message (e.g. `https://yourinstance.visualforce.com`) to the list of whitelisted domains.
+
+
 # Credits
 
 [Doug Ayers](https://douglascayers.com) develops and maintains the project.
