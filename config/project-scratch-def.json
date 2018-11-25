@@ -1,11 +1,10 @@
 {
-  "orgName": "Lightning API",
-  "edition": "Developer",
-  "features": [],
-  "orgPreferences": {
-    "enabled": [],
-    "disabled": [
-      "S1EncryptedStoragePref2"
-    ]
+  "orgName" : "Lightning API",
+  "edition" : "Developer",
+  "features" : [],
+  "settings" : {
+    "orgPreferenceSettings" : {
+      "s1EncryptedStoragePref2" : false
+    }
   }
 }
