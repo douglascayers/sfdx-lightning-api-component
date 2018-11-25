@@ -6,7 +6,7 @@ License: BSD 3-Clause License
  -->
 <aura:component controller="LC_APIController">
 
-    <ltng:require scripts="{!$Resource.postmate_1_4_4}"
+    <ltng:require scripts="{!$Resource.postmate}"
                   afterScriptsLoaded="{!c.onScriptsLoaded}"/>
 
     <!--
@@ -24,7 +24,7 @@ License: BSD 3-Clause License
 
         Example usage:
             component.find( 'lcAPI' ).restRequest({
-                'url' : '/services/data/v43.0/sobjects/Account',
+                'url' : '/services/data/v44.0/sobjects/Account',
                 'method' : 'post',
                 'body' : JSON.stringify({
                     'Name' : 'Salesforce',

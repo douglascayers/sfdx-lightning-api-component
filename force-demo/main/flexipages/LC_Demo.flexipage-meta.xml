@@ -12,7 +12,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>url</name>
-                <value>/services/data/v43.0/sobjects/Account</value>
+                <value>/services/data/v44.0/sobjects/Account</value>
             </componentInstanceProperties>
             <componentName>LC_Demo</componentName>
         </componentInstances>
@@ -30,7 +30,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>url</name>
-                <value>/services/data/v43.0/sobjects/Account</value>
+                <value>/services/data/v44.0/sobjects/Account</value>
             </componentInstanceProperties>
             <componentName>LC_Demo</componentName>
         </componentInstances>
@@ -48,7 +48,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>url</name>
-                <value>/services/data/v43.0/ui-api/layout/Account</value>
+                <value>/services/data/v44.0/ui-api/layout/Account</value>
             </componentInstanceProperties>
             <componentName>LC_Demo</componentName>
         </componentInstances>

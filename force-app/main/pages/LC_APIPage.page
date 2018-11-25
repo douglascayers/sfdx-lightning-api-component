@@ -6,12 +6,12 @@ License: BSD 3-Clause License
  -->
 <apex:page>
 
-    <apex:includeScript value="{!$Resource.postmate_1_4_4}"/>
-    <apex:includeScript value="{!$Resource.jsforce_1_9_1}"/>
+    <apex:includeScript value="{!$Resource.postmate}"/>
+    <apex:includeScript value="{!$Resource.jsforce}"/>
 
     <script>
 
-        var conn = new jsforce.Connection({ accessToken: '{!$API.Session_Id}', version: '43.0' });
+        var conn = new jsforce.Connection({ accessToken: '{!$API.Session_Id}', version: '44.0' });
 
         var _restRequest;
 
