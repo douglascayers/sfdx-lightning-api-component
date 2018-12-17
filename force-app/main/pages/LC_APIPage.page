@@ -34,10 +34,23 @@ License: BSD 3-Clause License
                         // then whole post message operation fails,
                         // so wrapping our response with our own
                         // success flag to denote if any errors.
-                        resolve({
-                            success: false,
-                            data: err.message // postMessage cannot deserialize the Error object, so pick off the message
-                        });
+                        try {
+                            // If the server's response body was JSON but the status code
+                            // indicated an error, the response body is treated
+                            // as a string and set to Error.message property.
+                            // To propogate the original JSON payload as JSON then
+                            // we do JSON.parse here. If the parse fails then
+                            // just resolve with the Error.message string anyways.
+                            resolve({
+                                success: false,
+                                data: JSON.parse( err.message )
+                            });
+                        } catch ( e ) {
+                            resolve({
+                                success: false,
+                                data: err.message // postMessage cannot deserialize the Error object, so pick off the message
+                            });
+                        }
                     });
                 });
             }
