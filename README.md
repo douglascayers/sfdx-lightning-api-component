@@ -58,7 +58,21 @@ Find the `<c:lc_api>` by its `aura:id` then call one of the request methods:
             // handle error
         }));
 
+    },
+
+    getDataFromGist: function( component, event, helper ) {
+
+        component.find( 'lc_api' ).fetchRequest({
+            'url' : 'https://gist.githubusercontent.com/douglascayers/e96c53304dc78dc83e59a85753f29111/raw/sfdx-mass-action-scheduler-version.js',
+            'options': {}
+        }).then( $A.getCallback( function( response ) {
+            // handle response
+        })).catch( $A.getCallback( function( err ) {
+            // handle error
+        }));
+
     }
+
 })
 ```
 
