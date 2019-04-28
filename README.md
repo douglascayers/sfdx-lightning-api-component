@@ -2,7 +2,7 @@
 
 A simple [promise-based](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/js_promises.htm)
 [service component](https://developer.salesforce.com/blogs/2018/08/implement-and-use-lightning-service-components.html)
-for working with Salesforce REST API
+for working with Salesforce REST API and JavaScript Fetch API
 directly from your component's JavaScript without you needing to
 write Apex or configure Named Credentials. Just install and use.
 
@@ -11,7 +11,7 @@ write Apex or configure Named Credentials. Just install and use.
 
 1. Deploy this project to your org (you only need what's in `force-app` folder).
 
-2. Explore the `LC_Demo` component in the `force-demo` folder on usage.
+2. Explore the `LC_RequestDemo` and `LC_FetchDemo` components in the `force-demo` folder on usage.
 
 3. Try out a demo
 
@@ -19,7 +19,7 @@ write Apex or configure Named Credentials. Just install and use.
 
     b. Navigate to the **LC Demo** tab.
 
-    c. Play with the sample components to send different REST API requests.
+    c. Play with the sample components to send different [REST API](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_what_is_rest_api.htm) and [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) requests.
 
     d. Marvel that you didn't have to write any Apex code or configure a Named Credential :)
 
@@ -31,19 +31,21 @@ Add the `<c:lc_api>` to your component and give it an `aura:id` for reference.
 ```xml
 <!-- YourComponent.cmp -->
 <aura:component>
-    <c:lc_api aura:id="restClient"/>
+    <c:lc_api aura:id="lc_api"/>
     ...
 </aura:component>
 ```
 
-Find the `<c:lc_api>` by its `aura:id` then call the `restRequest(..)` method passing in the `url`, `method`, `body`, and any `headers`.
+Find the `<c:lc_api>` by its `aura:id` then call one of the request methods:
+  * The `restRequest(..)` method passing in a JSON object with the `url`, `method`, `body`, and any `headers` properties, or
+  * The `fetchRequest(..)` method passing in a JSON object with the `url` and `options` properties 
 
 ```js
 // YourComponentController.js
 ({
     createAccount: function( component, event, helper ) {
 
-        component.find( 'restClient' ).restRequest({
+        component.find( 'lc_api' ).restRequest({
             'url' : '/services/data/v45.0/sobjects/Account',
             'method' : 'post',
             'body' : JSON.stringify({
@@ -79,7 +81,7 @@ Because the two domains do not match, then CORS policy prevents the request.
 
 [Doug Ayers](https://douglascayers.com) develops and maintains the project.
 
-[Postmate](https://github.com/dollarshaveclub/postmate)
+[Penpal](https://github.com/Aaronius/penpal)
 for a secure, promise-based library for communicating between windows and iframes.
 
 [jsforce](https://jsforce.github.io/)
