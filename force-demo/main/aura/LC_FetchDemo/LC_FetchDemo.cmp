@@ -4,13 +4,35 @@ Website: https://douglascayers.com
 GitHub: https://github.com/douglascayers/sfdx-lightning-api-component
 License: BSD 3-Clause License
  -->
-<apex:page controller="LC_VisualforceDomainController"
-           contentType="text/plain"
-           showHeader="false"
-           showChat="false"
-           sideBar="false"
-           applyHtmlTag="false"
-           applyBodyTag="false">{!domainURL}</apex:page>
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="url" type="String" required="true"/>
+    <aura:attribute name="httpMethod" type="String" default="get"/>
+    <aura:attribute name="requestBody" type="String" default=""/>
+    <aura:attribute name="requestHeaders" type="Map" default='{}'/>
+
+    <aura:attribute name="responseIsError" type="Boolean" default="false"/>
+    <aura:attribute name="responseText" type="String" default=""/>
+
+    <c:LC_API aura:id="lc_api"/>
+
+    <lightning:card title="LC Fetch API Demo" footer="Uses JavaScript Fetch API">
+        <aura:set attribute="actions">
+            <lightning:button label="Submit Request" onclick="{!c.onSubmitRequestConfirmed}" class="lc-demo-submit-btn"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            <form>
+                <lightning:input label="URL" type="text" aura:id="url" value="{!v.url}"/>
+                <lightning:input label="Http Method" type="text" aura:id="httpMethod" value="{!v.httpMethod}"/>
+                <lightning:input label="Http Body" type="text" aura:id="requestBody" value="{!v.requestBody}"/>
+            </form>
+        </p>
+        <p class="slds-p-horizontal_small">
+            <pre class="{!'slds-box slds-theme_shade ' + if(v.responseIsError, 'slds-text-color_error', '')}">{!v.responseText}</pre>
+        </p>
+    </lightning:card>
+
+</aura:component>
 <!--
 BSD 3-Clause License
 

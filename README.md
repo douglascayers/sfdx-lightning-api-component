@@ -44,7 +44,7 @@ Find the `<c:lc_api>` by its `aura:id` then call the `restRequest(..)` method pa
     createAccount: function( component, event, helper ) {
 
         component.find( 'restClient' ).restRequest({
-            'url' : '/services/data/v44.0/sobjects/Account',
+            'url' : '/services/data/v45.0/sobjects/Account',
             'method' : 'post',
             'body' : JSON.stringify({
                 "Name" : "LC Demo Account"

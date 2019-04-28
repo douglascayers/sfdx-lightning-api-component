@@ -1,17 +1,37 @@
-<!--
+/*
 Author: Doug Ayers
 Website: https://douglascayers.com
 GitHub: https://github.com/douglascayers/sfdx-lightning-api-component
 License: BSD 3-Clause License
- -->
-<apex:page controller="LC_VisualforceDomainController"
-           contentType="text/plain"
-           showHeader="false"
-           showChat="false"
-           sideBar="false"
-           applyHtmlTag="false"
-           applyBodyTag="false">{!domainURL}</apex:page>
-<!--
+ */
+({
+    onSubmitRequestConfirmed: function( component, event, helper ) {
+
+        component.set( 'v.responseText', 'please wait...' );
+
+        let url = component.get( 'v.url' );
+        let method = component.get( 'v.httpMethod' );
+        let body = component.get( 'v.requestBody' );
+        let headers = component.get( 'v.requestHeaders' );
+
+        component.find( 'lc_api' ).fetchRequest({
+            'url' : url,
+            'options' : {
+                'method' : method,
+                'body' : ( method.toLowerCase() === 'get' ) ? null : body,
+                'headers' : headers
+            }
+        }).then( $A.getCallback( function( response ) {
+            component.set( 'v.responseIsError', false );
+            component.set( 'v.responseText', JSON.stringify( response, null, 2 ) );
+        })).catch( $A.getCallback( function( err ) {
+            component.set( 'v.responseIsError', true );
+            component.set( 'v.responseText', JSON.stringify( err, null, 2 ) );
+        }));
+
+    }
+})
+/*
 BSD 3-Clause License
 
 Copyright (c) 2018, Doug Ayers, douglascayers.com
@@ -41,4 +61,4 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
--->
+*/

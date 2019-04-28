@@ -4,13 +4,24 @@ Website: https://douglascayers.com
 GitHub: https://github.com/douglascayers/sfdx-lightning-api-component
 License: BSD 3-Clause License
  -->
-<apex:page controller="LC_VisualforceDomainController"
-           contentType="text/plain"
-           showHeader="false"
-           showChat="false"
-           sideBar="false"
-           applyHtmlTag="false"
-           applyBodyTag="false">{!domainURL}</apex:page>
+<design:component>
+
+    <design:attribute name="url"
+                      label="Endpoint"
+                      description="Full or relative url like /services/data/v45.0/[resource]"
+                      default="/services/data/v45.0/sobjects/Account"/>
+
+    <design:attribute name="httpMethod"
+                      label="Http Method"
+                      description="GET, POST, etc."
+                      default="post"/>
+
+    <design:attribute name="requestBody"
+                      label="Request Body"
+                      description="Request body."
+                      default='{ "Name" : "LC Demo Account" }'/>
+
+</design:component>
 <!--
 BSD 3-Clause License
 
