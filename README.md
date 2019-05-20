@@ -6,6 +6,15 @@ for working with Salesforce REST API and JavaScript Fetch API
 directly from your component's JavaScript without you needing to
 write Apex or configure Named Credentials. Just install and use.
 
+# Pre-Requisites
+
+1. Enable Lightning Experience
+2. Enable My Domain
+3. Allow IFraming of Visualforce Pages with Clickjack Protection
+
+You can find step-by-step instructions with screen shots in the [Mass Action Scheduler Pre-Requisites](https://github.com/douglascayers-org/sfdx-mass-action-scheduler/wiki/Pre-Requisites-Instructions) wiki page,
+which is my primary app that uses this component. 
+
 
 # Getting Started
 
