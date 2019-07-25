@@ -117,7 +117,7 @@ License: BSD 3-Clause License
             if ( response.success ) {
                 return response.data;
             } else {
-                throw new Error( response.data );
+                return Promise.reject( response.data );
             }
         }));
 
