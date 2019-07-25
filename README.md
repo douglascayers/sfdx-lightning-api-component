@@ -11,9 +11,12 @@ write Apex or configure Named Credentials. Just install and use.
 * [Prerequisites](#-prerequisites)
 * [Getting Started](#-getting-started)
 * [Example Usage](#-example-usage)
+* [Sponsoring](#-sponsoring)
+* [Contributing](#-contributing)
 * [Troubleshooting](#-troubleshooting)
 * [Authors](#️-authors)
 * [Acknowledgements](#-acknowledgements)
+* [Other Utilities](#-other-utilities)
 * [License](#-license)
 
 ## 🚨 Prerequisites
@@ -22,7 +25,7 @@ write Apex or configure Named Credentials. Just install and use.
 2. Enable My Domain
 3. Allow IFraming of Visualforce Pages with Clickjack Protection
 
-You can find step-by-step instructions with screen shots in the [Mass Action Scheduler Pre-Requisites](https://github.com/douglascayers-org/sfdx-mass-action-scheduler/wiki/Pre-Requisites-Instructions) wiki page,
+You can find step-by-step instructions with screen shots in the [Mass Action Scheduler Pre-Requisites](https://github.com/douglascayers/sfdx-lightning-api-component/wiki/Pre-Requisites-Instructions) wiki page,
 which is my primary app that uses this component. 
 
 ## 👋 Getting Started
@@ -110,6 +113,30 @@ Find the `<c:lc_api>` by its `aura:id` then call one of the request methods:
 
 })
 ```
+
+## 💎 Sponsoring
+
+This project is a [free-as-in-speech](https://www.howtogeek.com/howto/31717/what-do-the-phrases-free-speech-vs.-free-beer-really-mean/) and [open source](https://opensource.com/resources/what-open-source) developed passion project of [Doug Ayers](https://douglascayers.com).
+
+If you've found value in my open source projects, please consider showing your support:
+  * ⭐️ [Star](https://github.com/douglascayers/sfdx-lightning-api-component) this project on GitHub
+  * 📣 [Tweet](https://twitter.com/intent/tweet/?url=https%3A%2F%2Fgithub.com%2Fdouglascayers%2Fsfdx-lightning-api-component&text=%E2%9A%A1%EF%B8%8F%20Use%20Salesforce%20REST%20API%20in%20Lightning%20Aura%20Components%20without%20Named%20Credentials%20https%3A%2F%2Fgithub.com%2Fdouglascayers%2Fsfdx-lightning-api-component%20by%20%40DouglasCAyers&related=douglascayers%2Csalesforcedevs&hashtags=salesforce) this project to your followers
+  * Contribute a ☕️ or 🌮 via my [virtual tip jar on PayPal](https://www.paypal.me/douglascayers/)
+
+Thank you! ❤️
+
+https://douglascayers.com/thanks-for-your-support/
+
+## 🙏 Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+For code contributions, please follow the [GitHub flow](https://help.github.com/en/articles/github-flow):
+1. Fork this project and [install the source code](#-getting-started).
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to your feature branch (`git push origin feature/AmazingFeature`).
+5. Open a pull request to the `develop` branch.
 
 ## 🧐 Troubleshooting
 
