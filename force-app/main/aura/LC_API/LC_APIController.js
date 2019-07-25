@@ -68,19 +68,19 @@ License: BSD 3-Clause License
     },
 
     onRestRequest: function( component, event, helper ) {
-        var params = event.getParam( 'arguments' );
+        const params = event.getParam( 'arguments' );
         return helper.handleRestRequest( component, params.request );
     },
 
     onFetchRequest: function( component, event, helper ) {
-        var params = event.getParam( 'arguments' );
+        const params = event.getParam( 'arguments' );
         return helper.handleFetchRequest( component, params.request );
     }
 })
 /*
 BSD 3-Clause License
 
-Copyright (c) 2018, Doug Ayers, douglascayers.com
+Copyright (c) 2018-2019, Doug Ayers, douglascayers.com
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

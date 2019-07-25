@@ -1,9 +1,9 @@
-# Call REST API from Lightning Components without Named Credentials
+# Call REST API from Lightning Aura Components without Named Credentials
 
 A simple [promise-based](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/js_promises.htm)
 [service component](https://developer.salesforce.com/blogs/2018/08/implement-and-use-lightning-service-components.html)
 for working with Salesforce REST API and JavaScript Fetch API
-directly from your component's JavaScript without you needing to
+directly from your aura component's JavaScript without you needing to
 write Apex or configure Named Credentials. Just install and use.
 
 ## 📝 Table of Contents
@@ -61,7 +61,7 @@ which is my primary app that uses this component.
 
 ## 📘 Example Usage
 
-Add the `<c:lc_api>` to your component and give it an `aura:id` for reference.
+Add the `<c:lc_api>` to your aura component and give it an `aura:id` for reference.
 
 ```xml
 <!-- YourComponent.cmp -->
