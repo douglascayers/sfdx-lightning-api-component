@@ -25,8 +25,7 @@ write Apex or configure Named Credentials. Just install and use.
 2. Enable My Domain
 3. Allow IFraming of Visualforce Pages with Clickjack Protection
 
-You can find step-by-step instructions with screen shots in the [Mass Action Scheduler Pre-Requisites](https://github.com/douglascayers/sfdx-lightning-api-component/wiki/Pre-Requisites-Instructions) wiki page,
-which is my primary app that uses this component. 
+You can find step-by-step instructions with screen shots in the [Mass Action Scheduler](https://github.com/douglascayers-org/sfdx-mass-action-scheduler/wiki/Prerequisites) wiki, which is my primary app that uses this component. 
 
 ## 👋 Getting Started
 
