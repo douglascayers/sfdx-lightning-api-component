@@ -6,7 +6,17 @@ for working with Salesforce REST API and JavaScript Fetch API
 directly from your component's JavaScript without you needing to
 write Apex or configure Named Credentials. Just install and use.
 
-# Pre-Requisites
+## 📝 Table of Contents
+
+* [Prerequisites](#-prerequisites)
+* [Getting Started](#-getting-started)
+* [Example Usage](#-example-usage)
+* [Troubleshooting](#-troubleshooting)
+* [Authors](#️-authors)
+* [Acknowledgements](#-acknowledgements)
+* [License](#-license)
+
+## 🚨 Prerequisites
 
 1. Enable Lightning Experience
 2. Enable My Domain
@@ -15,14 +25,31 @@ write Apex or configure Named Credentials. Just install and use.
 You can find step-by-step instructions with screen shots in the [Mass Action Scheduler Pre-Requisites](https://github.com/douglascayers-org/sfdx-mass-action-scheduler/wiki/Pre-Requisites-Instructions) wiki page,
 which is my primary app that uses this component. 
 
-
-# Getting Started
+## 👋 Getting Started
 
 1. Deploy this project to your org (you only need what's in `force-app` folder).
+
+    ```
+    git clone https://github.com/douglascayers/sfdx-lightning-api-component.git
+    
+    cd sfdx-lightning-api-component
+    
+    sfdx force:org:create -a lapi -s -f config/project-scratch-def.json
+    
+    sfdx force:source:deploy -u lapi -p force-app
+    ```
 
 2. Explore the `LC_RequestDemo` and `LC_FetchDemo` components in the `force-demo` folder on usage.
 
 3. Try out a demo
+
+    ```
+    sfdx force:source:deploy -u lapi -p force-demo
+    
+    sfdx force:user:permset:assign -n LC_Demo
+    
+    sfdx force:org:open -u lapi -p //lightning/n/LC_Demo
+    ```
 
     a. Assign yourself the **LC Demo** permission set.
 
@@ -32,8 +59,7 @@ which is my primary app that uses this component.
 
     d. Marvel that you didn't have to write any Apex code or configure a Named Credential :)
 
-
-## Example Usage
+## 📘 Example Usage
 
 Add the `<c:lc_api>` to your component and give it an `aura:id` for reference.
 
@@ -55,7 +81,7 @@ Find the `<c:lc_api>` by its `aura:id` then call one of the request methods:
     createAccount: function( component, event, helper ) {
 
         component.find( 'lc_api' ).restRequest({
-            'url' : '/services/data/v45.0/sobjects/Account',
+            'url' : '/services/data/v46.0/sobjects/Account',
             'method' : 'post',
             'body' : JSON.stringify({
                 "Name" : "LC Demo Account"
@@ -85,9 +111,9 @@ Find the `<c:lc_api>` by its `aura:id` then call one of the request methods:
 })
 ```
 
-# Troubleshooting
+## 🧐 Troubleshooting
 
-## "Access Denied" or "No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://yourinstance.visualforce.com' is therefore not allowed access."
+### "Access Denied" or "No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://yourinstance.visualforce.com' is therefore not allowed access."
 
 Your request was blocked due to [Cross-Origin Resource Sharing (CORS) policy](https://help.salesforce.com/articleView?id=extend_code_cors.htm&type=5).
 
@@ -99,10 +125,13 @@ Because the two domains do not match, then CORS policy prevents the request.
 
 2. Add the origin URL mentioned in your error message (e.g. `https://yourinstance.visualforce.com`) to the list of whitelisted domains.
 
-
-# Credits
+## ✍️ Authors
 
 [Doug Ayers](https://douglascayers.com) develops and maintains the project.
+
+See also the list of [contributors](https://github.com/douglascayers/sfdx-lightning-api-component/graphs/contributors) who participated in this project.
+
+## 🎉 Acknowledgements
 
 [Penpal](https://github.com/Aaronius/penpal)
 for a secure, promise-based library for communicating between windows and iframes.
@@ -110,13 +139,11 @@ for a secure, promise-based library for communicating between windows and iframe
 [jsforce](https://jsforce.github.io/)
 for an elegant, promise-based library for working with Salesforce REST API.
 
-
-# Other Utilities
+## 🎈 Other Utilities
 
 You should check out [sfdc-lax](https://github.com/ruslan-kurchenko/sfdc-lax) by Ruslan Kurchenko,
 a promise-based service component that makes calling Apex actions or using Lightning Data Service a breeze.
 
-
-# License
+## 👀 License
 
 The source code is licensed under the [BSD 3-Clause License](LICENSE)

@@ -9,7 +9,7 @@ License: BSD 3-Clause License
     <design:attribute name="url"
                       label="Endpoint"
                       description="URL to invoke. If cross-domain, ensure CORS is configured on the endpoint's server."
-                      default="https://gist.githubusercontent.com/douglascayers/e96c53304dc78dc83e59a85753f29111/raw/83713d855d4d259ee82a1cd7a7f098c72b0dea27/sfdx-mass-action-scheduler-version.js"/>
+                      default="https://gist.githubusercontent.com/douglascayers/e96c53304dc78dc83e59a85753f29111/raw/sfdx-mass-action-scheduler-version.js"/>
 
     <design:attribute name="httpMethod"
                       label="Http Method"
