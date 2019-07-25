@@ -1,7 +1,6 @@
-.idea
-.sfdx
-.vscode
+.idea/
+.sfdx/
+.vscode/
 *.iml
-assets
-IlluminatedCloud
-deploy.sh
+IlluminatedCloud/
+node_modules/
