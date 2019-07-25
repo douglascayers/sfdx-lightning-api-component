@@ -119,7 +119,7 @@ This project is a [free-as-in-speech](https://www.howtogeek.com/howto/31717/what
 
 If you've found value in my open source projects, please consider showing your support:
   * ⭐️ [Star](https://github.com/douglascayers/sfdx-lightning-api-component) this project on GitHub
-  * 📣 [Tweet](https://twitter.com/intent/tweet/?url=https%3A%2F%2Fgithub.com%2Fdouglascayers%2Fsfdx-lightning-api-component&text=%E2%9A%A1%EF%B8%8F%20Use%20Salesforce%20REST%20API%20in%20Lightning%20Aura%20Components%20without%20Named%20Credentials%20https%3A%2F%2Fgithub.com%2Fdouglascayers%2Fsfdx-lightning-api-component%20by%20%40DouglasCAyers&related=douglascayers%2Csalesforcedevs&hashtags=salesforce) this project to your followers
+  * 📣 [Tweet](https://twitter.com/intent/tweet/?url=https%3A%2F%2Fgithub.com%2Fdouglascayers%2Fsfdx-lightning-api-component&text=%E2%9A%A1%EF%B8%8F%20Use%20Salesforce%20REST%20API%20in%20Lightning%20Components%20without%20Named%20Credentials%20or%20Apex%20by%20%40DouglasCAyers&related=douglascayers%2Csalesforcedevs&hashtags=salesforce) this project to your followers
   * Contribute a ☕️ or 🌮 via my [virtual tip jar on PayPal](https://www.paypal.me/douglascayers/)
 
 Thank you! ❤️
