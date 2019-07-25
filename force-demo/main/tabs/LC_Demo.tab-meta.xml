@@ -3,6 +3,5 @@
     <description>Created by Lightning App Builder</description>
     <flexiPage>LC_Demo</flexiPage>
     <label>LC Demo</label>
-    <mobileReady>true</mobileReady>
     <motif>Custom9: Lightning</motif>
 </CustomTab>
