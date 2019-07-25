@@ -14,6 +14,7 @@ write Apex or configure Named Credentials. Just install and use.
 * [Troubleshooting](#-troubleshooting)
 * [Authors](#️-authors)
 * [Acknowledgements](#-acknowledgements)
+* [Other Utilities](#-other-utilities)
 * [License](#-license)
 
 ## 🚨 Prerequisites
