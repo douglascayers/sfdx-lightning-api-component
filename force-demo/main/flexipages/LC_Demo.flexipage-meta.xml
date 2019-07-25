@@ -12,7 +12,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>url</name>
-                <value>/services/data/v45.0/sobjects/Account</value>
+                <value>/services/data/v46.0/sobjects/Account</value>
             </componentInstanceProperties>
             <componentName>LC_RequestDemo</componentName>
         </componentInstances>
@@ -26,7 +26,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>url</name>
-                <value>/services/data/v45.0/ui-api/layout/Account</value>
+                <value>/services/data/v46.0/ui-api/layout/Account</value>
             </componentInstanceProperties>
             <componentName>LC_RequestDemo</componentName>
         </componentInstances>
@@ -44,7 +44,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>url</name>
-                <value>/services/data/v45.0/sobjects/Account</value>
+                <value>/services/data/v46.0/sobjects/Account</value>
             </componentInstanceProperties>
             <componentName>LC_RequestDemo</componentName>
         </componentInstances>
@@ -58,7 +58,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>url</name>
-                <value>https://gist.githubusercontent.com/douglascayers/e96c53304dc78dc83e59a85753f29111/raw/83713d855d4d259ee82a1cd7a7f098c72b0dea27/sfdx-mass-action-scheduler-version.js</value>
+                <value>https://gist.githubusercontent.com/douglascayers/e96c53304dc78dc83e59a85753f29111/raw/sfdx-mass-action-scheduler-version.js</value>
             </componentInstanceProperties>
             <componentName>LC_FetchDemo</componentName>
         </componentInstances>
