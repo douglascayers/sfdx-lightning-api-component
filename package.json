@@ -3,7 +3,12 @@
     "version": "2.1.0",
     "description": "Promise-based service component for calling REST API from Lightning Aura Components without Named Credentials.",
     "scripts": {
-        "deploy": "sfdx force:source:deploy -p force-app,force-demo -w 10"
+        "org:create": "sfdx force:org:create --setalias lapi --setdefaultusername --definitionfile config/project-scratch-def.json",
+        "org:delete": "sfdx force:org:delete --targetusername lapi",
+        "org:open": "sfdx force:org:open --targetusername lapi --path //lightning/n/LC_Demo",
+        "source:deploy": "sfdx force:source:deploy --sourcepath force-app,force-demo --wait 10",
+        "permset:assign": "sfdx force:user:permset:assign --permsetname LC_Demo",
+        "apex:test": "sfdx force:apex:test:run --targetusername lapi --codecoverage --resultformat human --wait 10"
     },
     "repository": {
         "type": "git",
