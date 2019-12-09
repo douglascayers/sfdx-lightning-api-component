@@ -8,8 +8,8 @@ License: BSD 3-Clause License
 
     <design:attribute name="url"
                       label="Endpoint"
-                      description="Full or relative url like /services/data/v46.0/[resource]"
-                      default="/services/data/v46.0/sobjects/Account"/>
+                      description="Full or relative url like /services/data/v47.0/[resource]"
+                      default="/services/data/v47.0/sobjects/Account"/>
 
     <design:attribute name="httpMethod"
                       label="Http Method"

@@ -25,7 +25,7 @@ write Apex or configure Named Credentials. Just install and use.
 2. Enable My Domain
 3. Allow IFraming of Visualforce Pages with Clickjack Protection
 
-You can find step-by-step instructions with screen shots in the [Mass Action Scheduler](https://github.com/douglascayers-org/sfdx-mass-action-scheduler/wiki/Prerequisites) wiki, which is my primary app that uses this component. 
+You can find step-by-step instructions with screen shots in the [Mass Action Scheduler](https://github.com/douglascayers-org/sfdx-mass-action-scheduler/wiki/Prerequisites) wiki, which is my primary app that uses this component.
 
 ## 👋 Getting Started
 
@@ -33,11 +33,11 @@ You can find step-by-step instructions with screen shots in the [Mass Action Sch
 
     ```
     git clone https://github.com/douglascayers/sfdx-lightning-api-component.git
-    
+
     cd sfdx-lightning-api-component
-    
+
     sfdx force:org:create -a lapi -s -f config/project-scratch-def.json
-    
+
     sfdx force:source:deploy -u lapi -p force-app
     ```
 
@@ -47,9 +47,9 @@ You can find step-by-step instructions with screen shots in the [Mass Action Sch
 
     ```
     sfdx force:source:deploy -u lapi -p force-demo
-    
+
     sfdx force:user:permset:assign -n LC_Demo
-    
+
     sfdx force:org:open -u lapi -p //lightning/n/LC_Demo
     ```
 
@@ -75,7 +75,7 @@ Add the `<c:lc_api>` to your aura component and give it an `aura:id` for referen
 
 Find the `<c:lc_api>` by its `aura:id` then call one of the request methods:
   * The `restRequest(..)` method passing in a JSON object with the `url`, `method`, `body`, and any `headers` properties, or
-  * The `fetchRequest(..)` method passing in a JSON object with the `url` and `options` properties 
+  * The `fetchRequest(..)` method passing in a JSON object with the `url` and `options` properties
 
 ```js
 // YourComponentController.js
@@ -83,7 +83,7 @@ Find the `<c:lc_api>` by its `aura:id` then call one of the request methods:
     createAccount: function( component, event, helper ) {
 
         component.find( 'lc_api' ).restRequest({
-            'url' : '/services/data/v46.0/sobjects/Account',
+            'url' : '/services/data/v47.0/sobjects/Account',
             'method' : 'post',
             'body' : JSON.stringify({
                 "Name" : "LC Demo Account"
