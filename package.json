@@ -1,6 +1,6 @@
 {
     "name": "sfdx-lightning-api-component",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "description": "Promise-based service component for calling REST API from Lightning Aura Components without Named Credentials.",
     "scripts": {
         "org:create": "sfdx force:org:create --setalias lapi --setdefaultusername --definitionfile config/project-scratch-def.json",
