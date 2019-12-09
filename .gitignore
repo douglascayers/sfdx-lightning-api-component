@@ -1,6 +1,17 @@
-.idea/
+# Salesforce DX configuration files.
 .sfdx/
-.vscode/
-*.iml
+
+# IlluminatedCloud configuration files.
+.idea/
 IlluminatedCloud/
+*.iml
+
+# Visual Studio Code configuration files.
+.vscode/
+
+# A temp directory where build scripts convert
+# source files to metadata format.
+mdapi/
+
+# NPM cache directory.
 node_modules/
