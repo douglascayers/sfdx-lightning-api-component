@@ -20,7 +20,7 @@
     "bugs": "https://github.com/douglascayers/sfdx-lightning-api-component/issues",
     "homepage": "https://github.com/douglascayers/sfdx-lightning-api-component#readme",
     "dependencies": {
-        "jsforce": "1.9.2",
+        "jsforce": "1.9.3",
         "penpal": "4.1.1"
     }
 }
