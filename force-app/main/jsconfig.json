@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/api": [
+                "lwcApi/lwcApi.js"
+            ],
+        }
+    }
+}
